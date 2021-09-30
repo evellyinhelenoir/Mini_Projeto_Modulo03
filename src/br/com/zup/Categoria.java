@@ -1,18 +1,47 @@
 package br.com.zup;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Categoria {
-    private HashMap<String, String> categoriaA = new HashMap<String, String>();
-    private HashMap<String, String> categoriaB = new HashMap<String, String>();
-    private HashMap<String, String> categoriaD = new HashMap<String, String>();
-    private HashMap<String, String> categoriaE = new HashMap<String, String>();
+    private List<Categoria> categoriaA = new ArrayList<>();
+    private List<Categoria> categoriaB = new ArrayList<>();
+    private List<Categoria> categoriaD = new ArrayList<>();
+    private List<Categoria> categoriaE = new ArrayList<>();
 
-    public Categoria(HashMap<String, String> categoriaA, HashMap<String, String> categoriaB, HashMap<String, String> categoriaD, HashMap<String, String> categoriaE) {
+    public Categoria() {
+    }
+
+    public List<Categoria> getCategoriaA() {
+        return categoriaA;
+    }
+
+    public void setCategoriaA(List<Categoria> categoriaA) {
         this.categoriaA = categoriaA;
+    }
+
+    public List<Categoria> getCategoriaB() {
+        return categoriaB;
+    }
+
+    public void setCategoriaB(List<Categoria> categoriaB) {
         this.categoriaB = categoriaB;
+    }
+
+    public List<Categoria> getCategoriaD() {
+        return categoriaD;
+    }
+
+    public void setCategoriaD(List<Categoria> categoriaD) {
         this.categoriaD = categoriaD;
+    }
+
+    public List<Categoria> getCategoriaE() {
+        return categoriaE;
+    }
+
+    public void setCategoriaE(List<Categoria> categoriaE) {
         this.categoriaE = categoriaE;
     }
 }
