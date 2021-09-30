@@ -50,6 +50,7 @@ public class AutoEscola {
 
     }
 
+
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
     }
