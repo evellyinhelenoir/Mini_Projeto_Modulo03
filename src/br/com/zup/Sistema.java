@@ -38,18 +38,33 @@ public class Sistema {
 
     }
 
+    public static Funcionario cadastrarFuncionario(){
+
+        String nome = capturarDados("Digite o nome do funcionário: ").nextLine();
+        String cpf = capturarDados("Digite o cpf do funcionário: ").nextLine();
+        int idade = capturarDados("Digite a idade do funcionário: ").nextInt();
+        String telefone = capturarDados("Digite o telefone do funcionário: ").nextLine();
+        String endereco = capturarDados("Digite o endereço do funcionário: ").nextLine();
+        String funcao = capturarDados("Digite a funcção do funcionário: ").nextLine();
+
+        Funcionario funcionario = new Funcionario(nome, cpf, idade, telefone, endereco, funcao);
+        return funcionario;
+    }
 
     public static void executar() {
 
         AutoEscola autoEscola = new AutoEscola("Pé No Freio", "Esquina da 25 Março", "40028922");
         boolean loop = true;
 
-
         while (loop) {
             menu();
             int opcao = capturarDados("Digite a opção desejada: \n").nextInt();
-
             if (opcao == 1){
+                System.out.println("Selecione qual função você deseja realizar: \n" +
+                        "1 - Para cadastrar um novo funcionário.\n" +
+                        "2 - Para remover um funcionário.\n" +
+                        "3 - Para exibir a lista de funcionários.\n" +
+                        "4 - Para voltar ao menu inicial.\n");
 
             }else if(opcao == 2){
 
@@ -67,6 +82,7 @@ public class Sistema {
                 }
 
             }else if(opcao == 3){
+
 
             }else {
                 System.out.println("Opção selecionada inválida, digite novamente!");
