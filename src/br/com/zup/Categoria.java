@@ -44,4 +44,16 @@ public class Categoria {
     public void setCategoriaE(List<Categoria> categoriaE) {
         this.categoriaE = categoriaE;
     }
+    public void adicionarCarro(Categoria novoCarro){
+        categoriaB.add(novoCarro);
+    }
+    public void adicionarMoto(Categoria novaMoto){
+        categoriaA.add(novaMoto);
+    }
+    public void adicionarCarreta(Categoria novaCarreta){
+        categoriaA.add(novaCarreta);
+    }
+    public void adicionarOnibus(Categoria novoOnibus){
+        categoriaA.add(novoOnibus);
+    }
 }
