@@ -1,7 +1,6 @@
 package br.com.zup;
 
 public class Veiculo {
-    private String tipo;
     private String marca;
     private String modelo;
     private String ano;
@@ -10,20 +9,12 @@ public class Veiculo {
 
     }
 
-    public Veiculo(String tipo, String marca, String modelo, String ano) {
-        this.tipo = tipo;
+    public Veiculo ( String marca, String modelo, String ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 
     public String getMarca() {
         return marca;
@@ -52,7 +43,6 @@ public class Veiculo {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Tipo do veiculo: " + tipo);
         retorno.append("\n Marca do veiculo: " + marca);
         retorno.append("\n Modelo do veiculo: " + modelo);
         retorno.append("\n Ano do veiculo: " + ano);
