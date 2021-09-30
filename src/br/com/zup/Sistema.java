@@ -38,6 +38,18 @@ public class Sistema {
 
     }
 
+    public static Funcionario cadastrarFuncionario(){
+
+        String nome = capturarDados("Digite o nome do funcionário: ").nextLine();
+        String cpf = capturarDados("Digite o cpf do funcionário: ").nextLine();
+        int idade = capturarDados("Digite a idade do funcionário: ").nextInt();
+        String telefone = capturarDados("Digite o telefone do funcionário: ").nextLine();
+        String endereco = capturarDados("Digite o endereço do funcionário: ").nextLine();
+        String funcao = capturarDados("Digite a funcção do funcionário: ").nextLine();
+
+        Funcionario funcionario = new Funcionario(nome, cpf, idade, telefone, endereco, funcao);
+        return funcionario;
+    }
 
     public static void executar() {
 
@@ -67,6 +79,7 @@ public class Sistema {
                 }
 
             }else if(opcao == 3){
+
 
             }else {
                 System.out.println("Opção selecionada inválida, digite novamente!");
