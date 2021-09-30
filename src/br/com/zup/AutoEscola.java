@@ -45,6 +45,14 @@ public class AutoEscola {
     }
 
 
+    public List<Aluno> exibirListaAlunos(){
+        for (Aluno referencia: aluno){
+            System.out.println(aluno);
+        }
+
+        return aluno;
+    }
+
     public void adicionarFuncionario(Funcionario novoFuncionario){
         funcionario.add(novoFuncionario);
 
