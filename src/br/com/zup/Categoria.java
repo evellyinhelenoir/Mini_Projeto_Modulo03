@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Categoria {
+
     private List<Categoria> categoriaA = new ArrayList<>();
     private List<Categoria> categoriaB = new ArrayList<>();
     private List<Categoria> categoriaD = new ArrayList<>();
@@ -44,16 +45,29 @@ public class Categoria {
     public void setCategoriaE(List<Categoria> categoriaE) {
         this.categoriaE = categoriaE;
     }
+
+
     public void adicionarCarro(Categoria novoCarro){
         categoriaB.add(novoCarro);
     }
+
     public void adicionarMoto(Categoria novaMoto){
         categoriaA.add(novaMoto);
     }
+
     public void adicionarCarreta(Categoria novaCarreta){
         categoriaE.add(novaCarreta);
     }
+
     public void adicionarOnibus(Categoria novoOnibus){
         categoriaD.add(novoOnibus);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("=======Categorias======");
+        retorno.append(super.toString());
+        return retorno.toString();
     }
 }

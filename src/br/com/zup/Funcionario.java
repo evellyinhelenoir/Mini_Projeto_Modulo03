@@ -20,4 +20,15 @@ public class Funcionario extends Pessoa {
         this.funcao = funcao;
     }
 
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n======Funcionário======");
+        retorno.append(super.toString());
+        retorno.append("\nFunção: " + funcao);
+        retorno.append("\n=================");
+        return retorno.toString();
+    }
+
 }
