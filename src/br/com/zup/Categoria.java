@@ -51,9 +51,9 @@ public class Categoria {
         categoriaA.add(novaMoto);
     }
     public void adicionarCarreta(Categoria novaCarreta){
-        categoriaA.add(novaCarreta);
+        categoriaE.add(novaCarreta);
     }
     public void adicionarOnibus(Categoria novoOnibus){
-        categoriaA.add(novoOnibus);
+        categoriaD.add(novoOnibus);
     }
 }
