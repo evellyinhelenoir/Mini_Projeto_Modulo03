@@ -20,4 +20,14 @@ public class Aluno extends Pessoa {
         this.categoriaDesejada = categoriaDesejada;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n======Aluno======");
+        retorno.append(super.toString());
+        retorno.append("\nCategoria Desejada: " + categoriaDesejada);
+        retorno.append("\n=================");
+        return retorno.toString();
+    }
+
 }

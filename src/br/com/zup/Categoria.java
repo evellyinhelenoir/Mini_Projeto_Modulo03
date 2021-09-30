@@ -5,55 +5,78 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Categoria {
-    private List<Categoria> categoriaA = new ArrayList<>();
-    private List<Categoria> categoriaB = new ArrayList<>();
-    private List<Categoria> categoriaD = new ArrayList<>();
-    private List<Categoria> categoriaE = new ArrayList<>();
+
+    private Veiculo veiculo;
+    private List<Veiculo> categoriaA = new ArrayList<>();
+    private List<Veiculo> categoriaB = new ArrayList<>();
+    private List<Veiculo> categoriaD = new ArrayList<>();
+    private List<Veiculo> categoriaE = new ArrayList<>();
 
     public Categoria() {
     }
 
-    public List<Categoria> getCategoriaA() {
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
+    public List<Veiculo> getCategoriaA() {
         return categoriaA;
     }
 
-    public void setCategoriaA(List<Categoria> categoriaA) {
+    public void setCategoriaA(List<Veiculo> categoriaA) {
         this.categoriaA = categoriaA;
     }
 
-    public List<Categoria> getCategoriaB() {
+    public List<Veiculo> getCategoriaB() {
         return categoriaB;
     }
 
-    public void setCategoriaB(List<Categoria> categoriaB) {
+    public void setCategoriaB(List<Veiculo> categoriaB) {
         this.categoriaB = categoriaB;
     }
 
-    public List<Categoria> getCategoriaD() {
+    public List<Veiculo> getCategoriaD() {
         return categoriaD;
     }
 
-    public void setCategoriaD(List<Categoria> categoriaD) {
+    public void setCategoriaD(List<Veiculo> categoriaD) {
         this.categoriaD = categoriaD;
     }
 
-    public List<Categoria> getCategoriaE() {
+    public List<Veiculo> getCategoriaE() {
         return categoriaE;
     }
 
-    public void setCategoriaE(List<Categoria> categoriaE) {
+    public void setCategoriaE(List<Veiculo> categoriaE) {
         this.categoriaE = categoriaE;
     }
-    public void adicionarCarro(Categoria novoCarro){
+
+    public void adicionarCarro(Veiculo novoCarro){
         categoriaB.add(novoCarro);
     }
-    public void adicionarMoto(Categoria novaMoto){
+
+    public void adicionarMoto(Veiculo novaMoto){
         categoriaA.add(novaMoto);
     }
-    public void adicionarCarreta(Categoria novaCarreta){
+
+    public void adicionarOnibus(Veiculo novoOnibus){
+        categoriaD.add(novoOnibus);
+    }
+
+    public void adicionarCarreta(Veiculo novaCarreta){
         categoriaE.add(novaCarreta);
     }
-    public void adicionarOnibus(Categoria novoOnibus){
-        categoriaD.add(novoOnibus);
+
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("=======Categorias======");
+        retorno.append(super.toString());
+        return retorno.toString();
     }
 }
