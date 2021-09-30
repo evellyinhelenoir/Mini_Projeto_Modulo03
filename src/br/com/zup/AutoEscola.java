@@ -3,11 +3,11 @@ package br.com.zup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AutoEscola {    private String nomeDaEmpresa;
+public class AutoEscola {
+    private String nomeDaEmpresa;
     private String enderecoDaEmpresa;
     private String cnpj;
-
-    private List<Funcionario> funcionario= new ArrayList<>();
+    private List<Funcionario> funcionario = new ArrayList<>();
     private List<Aluno> aluno = new ArrayList<>();
     private List<Veiculo> veiculo = new ArrayList<>();
 
@@ -44,13 +44,26 @@ public class AutoEscola {    private String nomeDaEmpresa;
         this.cnpj = cnpj;
     }
 
+
+    public void adicionarFuncionario(Funcionario novoFuncionario){
+        funcionario.add(novoFuncionario);
+
+    }
+
+
+    public void adicionarAlunos(Aluno novoAluno){
+        aluno.add(novoAluno);
+    }
+
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Nome da Empresa: " + nomeDaEmpresa);
-        retorno.append("\n Endereço da empresa: " + enderecoDaEmpresa);
-        retorno.append("\n CNPJ da empresa: " + cnpj);
+        retorno.append("\nNome da Empresa: " + nomeDaEmpresa);
+        retorno.append("\nEndereço da empresa: " + enderecoDaEmpresa);
+        retorno.append("\nCNPJ da empresa: " + cnpj);
         return retorno.toString();
     }
+
 }
 
