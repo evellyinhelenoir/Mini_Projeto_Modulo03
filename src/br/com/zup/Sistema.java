@@ -56,12 +56,15 @@ public class Sistema {
         AutoEscola autoEscola = new AutoEscola("Pé No Freio", "Esquina da 25 Março", "40028922");
         boolean loop = true;
 
-
         while (loop) {
             menu();
             int opcao = capturarDados("Digite a opção desejada: \n").nextInt();
-
             if (opcao == 1){
+                System.out.println("Selecione qual função você deseja realizar: \n" +
+                        "1 - Para cadastrar um novo funcionário.\n" +
+                        "2 - Para remover um funcionário.\n" +
+                        "3 - Para exibir a lista de funcionários.\n" +
+                        "4 - Para voltar ao menu inicial.\n");
 
             }else if(opcao == 2){
 

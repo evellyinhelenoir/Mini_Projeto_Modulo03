@@ -44,7 +44,6 @@ public class AutoEscola {
         this.cnpj = cnpj;
     }
 
-
     public List<Aluno> exibirListaAlunos(){
         for (Aluno referencia: aluno){
             System.out.println(aluno);
@@ -52,17 +51,13 @@ public class AutoEscola {
 
         return aluno;
     }
-
-    public void adicionarFuncionario(Funcionario novoFuncionario){
-        funcionario.add(novoFuncionario);
-
-    }
-
-
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
     }
 
+    public void adicionarFuncionario(Funcionario novoFuncionario) {
+        funcionario.add(novoFuncionario);
+    }
 
     @Override
     public String toString() {
