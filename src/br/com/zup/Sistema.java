@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -15,21 +16,60 @@ public class Sistema {
                 "Digite 2 para gerênciar os alunos.\n" +
                 "Digite 3 para gerênciar a frota de veículos.");
     }
+
+    private static void menuAluno(){
+        System.out.println("O que você deseja fazer?\n" +
+                "1- Cadastrar novo aluno\n" +
+                "2- Excluir aluno\n" +
+                "3- Exibir lista de alunos cadastrados\n");
+    }
+
+    public static Aluno cadastrarAluno(){
+        String nome = capturarDados("Digite o nome do Aluno: ").nextLine();
+        String cpf = capturarDados("Digite o CPF do Aluno: ").nextLine();
+        int idade = capturarDados("Digite a idade do Aluno: ").nextInt();
+        String telefone = capturarDados("Digite o telefone do Aluno: ").nextLine();
+        String endereco = capturarDados("Digite o endereço do Aluno: ").nextLine();
+        String categoria = capturarDados("Digite a categoria desejada do Aluno: ").nextLine();
+
+        Aluno aluno = new Aluno(nome,cpf,idade,telefone,endereco,categoria);
+
+        return aluno;
+
+    }
+
+
     public static void executar() {
 
         AutoEscola autoEscola = new AutoEscola("Pé No Freio", "Esquina da 25 Março", "40028922");
         boolean loop = true;
-        Scanner scan = new Scanner(System.in);
+
 
         while (loop) {
+            menu();
+            int opcao = capturarDados("Digite a opção desejada: \n").nextInt();
 
-            int opcao = scan.nextInt();
             if (opcao == 1){
 
             }else if(opcao == 2){
 
+                menuAluno();
+                opcao = capturarDados("Digite a opção desejada: \n").nextInt();
+                if (opcao == 1){
+                   Aluno aluno =  cadastrarAluno();
+                    autoEscola.adicionarAlunos(aluno);
+                }else if (opcao == 2){
+
+                }else if (opcao == 3){
+                    autoEscola.exibirListaAlunos();
+                }else{
+
+                }
+
             }else if(opcao == 3){
 
+            }else {
+                System.out.println("Opção selecionada inválida, digite novamente!");
             }
         }
     }
