@@ -50,6 +50,10 @@ public class AutoEscola {
 
     }
 
+    public void adicionarAlunos(Aluno novoAluno){
+        aluno.add(novoAluno);
+    }
+
 
     @Override
     public String toString() {
@@ -57,8 +61,8 @@ public class AutoEscola {
         retorno.append("\nNome da Empresa: " + nomeDaEmpresa);
         retorno.append("\nEndereço da empresa: " + enderecoDaEmpresa);
         retorno.append("\nCNPJ da empresa: " + cnpj);
-        retorno.append("\nFuncionários: " + funcionario);
         return retorno.toString();
     }
+
 }
 
