@@ -16,7 +16,7 @@ public class Sistema {
                 "\nDigite 1 para gerênciar os funcionários." +
                 "\nDigite 2 para gerênciar os alunos." +
                 "\nDigite 3 para gerênciar a frota de veículos." +
-                "\nDigite 4 para sair!.");
+                "\nDigite 4 para sair.");
     }
 
     private static void menuAluno() {
@@ -97,13 +97,15 @@ public class Sistema {
         AutoEscola autoEscola = new AutoEscola("Pé No Freio", "Esquina da 25 Março", "40028922");
 
         boolean loop = true;
-        boolean loopFuncionario = true;
-        boolean loopAluno = true;
-        boolean loopFrota = true;
+
 
         while (loop) {
 
             menu();
+
+            boolean loopFuncionario = true;
+            boolean loopAluno = true;
+            boolean loopFrota = true;
 
             int opcao = capturarDados("Digite a opção desejada:").nextInt();
 
@@ -112,19 +114,19 @@ public class Sistema {
                 while (loopFuncionario) {
 
                     menuFuncionario();
-                    opcao = capturarDados("Digite a opção desejada: ").nextInt();
+                    int opcaoFuncionario = capturarDados("Digite a opção desejada: ").nextInt();
 
-                    if (opcao == 1) {
+                    if (opcaoFuncionario == 1) {
                         Funcionario funcionario = cadastrarFuncionario();
                         autoEscola.adicionarFuncionario(funcionario);
 
-                    } else if (opcao == 2) {
+                    } else if (opcaoFuncionario == 2) {
                         autoEscola.removerFuncionario(capturarDados("Digite o cpf do funcionário a ser removido").nextLine());
 
-                    } else if (opcao == 3) {
+                    } else if (opcaoFuncionario == 3) {
                         autoEscola.exibirListaFuncionario();
 
-                    } else if (opcao == 4) {
+                    } else if (opcaoFuncionario == 4) {
                         loopFuncionario = false;
 
                     } else {
@@ -138,19 +140,19 @@ public class Sistema {
                 while (loopAluno) {
 
                     menuAluno();
-                    opcao = capturarDados("Digite a opção desejada: ").nextInt();
+                    int opcaoAluno = capturarDados("Digite a opção desejada: ").nextInt();
 
-                    if (opcao == 1) {
+                    if (opcaoAluno == 1) {
                         Aluno aluno = cadastrarAluno();
                         autoEscola.adicionarAlunos(aluno);
 
-                    } else if (opcao == 2) {
+                    } else if (opcaoAluno == 2) {
                         autoEscola.removerAluno(capturarDados("Digite o cpf do aluno  a ser removido").nextLine());
 
-                    } else if (opcao == 3) {
+                    } else if (opcaoAluno == 3) {
                         autoEscola.exibirListaAlunos();
 
-                    } else if (opcao == 4) {
+                    } else if (opcaoAluno == 4) {
                         loopAluno = false;
 
                     } else {
@@ -164,19 +166,19 @@ public class Sistema {
                 while (loopFrota) {
 
                     menuVeiculo();
-                    opcao = capturarDados("Digite a opção desejada: ").nextInt();
+                    int opcaoFrota = capturarDados("Digite a opção desejada: ").nextInt();
 
-                    if (opcao == 1) {
+                    if (opcaoFrota == 1) {
                         Veiculo veiculo = cadastrarVeiculo();
                         autoEscola.adicionarVeiculo(veiculo);
 
-                    } else if (opcao == 2) {
+                    } else if (opcaoFrota == 2) {
                         autoEscola.removerVeiculo(capturarDados("Digite a placa do veículo  a ser removido").nextLine());
 
-                    } else if (opcao == 3) {
+                    } else if (opcaoFrota == 3) {
                         autoEscola.exibirListaVeiculos();
 
-                    } else if (opcao == 4) {
+                    } else if (opcaoFrota == 4) {
                         loopFrota = false;
 
                     } else {
