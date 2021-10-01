@@ -48,6 +48,7 @@ public class AutoEscola {
     //Métodos referentes a  Alunos
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
+        System.out.println("Aluno cadastrado com sucesso!.");
     }
 
     public List<Aluno> exibirListaAlunos(){
@@ -63,19 +64,19 @@ public class AutoEscola {
 
         for (Aluno referencia : aluno) {
             if (referencia.getCpfPessoa().equals(pegarCPF)) {
-                System.out.println("Aluno Removido.");
                 alunoARemover = referencia;
-
             }
         }
 
         aluno.remove(alunoARemover);
+        System.out.println("Aluno removido com sucesso!");
 
     }
 
     //Métodos referentes a lista de Funcionarios
     public void adicionarFuncionario(Funcionario novoFuncionario) {
         funcionario.add(novoFuncionario);
+        System.out.println("Funcionario cadastrado com sucesso!.");
     }
 
     public List<Funcionario> exibirListaFuncionario(){
@@ -91,19 +92,20 @@ public class AutoEscola {
 
         for (Funcionario referencia : funcionario) {
             if (referencia.getCpfPessoa().equals(pegarCPF)) {
-                System.out.println("Funcionario Removido.");
                 funcionarioARemover = referencia;
 
             }
         }
 
         funcionario.remove(funcionarioARemover);
+        System.out.println("Funcionario removido com sucesso!");
 
     }
 
     //Métodos referentes a lista de Veiculos
     public void adicionarVeiculo(Veiculo novoVeiculo){
         veiculo.add(novoVeiculo);
+        System.out.println("Veículo cadastrado com sucesso!");
     }
 
     public List<Veiculo> exibirListaVeiculos(){
@@ -119,14 +121,12 @@ public class AutoEscola {
 
         for (Veiculo referencia : veiculo) {
             if (referencia.getPlaca().equals(pegarPlaca)) {
-                System.out.println("Carro Removido.");
                 veiculoARemover = referencia;
-
             }
         }
 
         veiculo.remove(veiculoARemover);
-
+        System.out.println("Veículo  removido com sucesso!");
     }
 
 
