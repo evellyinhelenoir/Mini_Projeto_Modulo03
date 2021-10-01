@@ -34,8 +34,15 @@ public class Sistema {
                 "\n4 - Para voltar ao menu inicial.");
     }
 
+    private static void menuVeiculo() {
+        System.out.println("\nSelecione qual função você deseja realizar: " +
+                "\n1 - Para cadastrar um novo veiculo." +
+                "\n2 - Para remover um veículo." +
+                "\n3 - Para exibir a lista de veículos cadastrados" +
+                "\n4 - Para voltar ao menu inicial.");
+    }
 
-    //Métodos Funcionario
+    //Método Funcionario
     public static Funcionario cadastrarFuncionario() {
 
         String nome = capturarDados("Digite o nome do funcionário: ").nextLine();
@@ -66,7 +73,7 @@ public class Sistema {
     }
 
 
-    //Métodos Veiculos
+    //Método Veiculos
 
 
     //Execução
