@@ -67,7 +67,7 @@ public class Pessoa {
         StringBuilder retorno = new StringBuilder();
         retorno.append("\nNome: " + nomePessoa);
         retorno.append("\nCPF: " + cpfPessoa);
-        retorno.append("\nIdade: " + idade + "anos");
+        retorno.append("\nIdade: " + idade + " anos");
         retorno.append("\nTelefone: " + telefone);
         retorno.append("\nEndereço: " + endereco);
         return retorno.toString();
