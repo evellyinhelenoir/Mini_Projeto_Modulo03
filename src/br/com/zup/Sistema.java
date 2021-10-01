@@ -87,6 +87,7 @@ public class Sistema {
             if (opcao == 1) {
                 while (loopFuncionario) {
 
+                    menuFuncionario();
                     opcao = capturarDados("Digite a opção desejada: ").nextInt();
 
                     if (opcao == 1) {
@@ -97,7 +98,7 @@ public class Sistema {
 
 
                     } else if (opcao == 3) {
-
+                        autoEscola.exibirListaFuncionario();
 
                     } else if (opcao == 4) {
                         loopFuncionario = false;
