@@ -72,6 +72,14 @@ public class AutoEscola {
         funcionario.add(novoFuncionario);
     }
 
+    public List<Funcionario> exibirListaFuncionario(){
+        for (Funcionario referencia: funcionario){
+            System.out.println(referencia);
+        }
+
+        return funcionario;
+    }
+
 
     @Override
     public String toString() {

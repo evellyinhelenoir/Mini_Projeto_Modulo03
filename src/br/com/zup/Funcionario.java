@@ -27,7 +27,7 @@ public class Funcionario extends Pessoa {
         retorno.append("\n======Funcionário======");
         retorno.append(super.toString());
         retorno.append("\nFunção: " + funcao);
-        retorno.append("\n=================");
+        retorno.append("\n=======================");
         return retorno.toString();
     }
 
