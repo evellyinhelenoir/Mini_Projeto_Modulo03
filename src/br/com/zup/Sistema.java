@@ -74,7 +74,18 @@ public class Sistema {
 
 
     //Método Veiculos
+    public static Veiculo cadastrarVeiculo(){
+        String tipo = capturarDados("Digite qual o tipo do veiculo: ").nextLine();
+        String marca = capturarDados("Digite a marca do veículo: ").nextLine();
+        String modelo = capturarDados("Digite o modelo do veículo: ").nextLine();
+        String ano = capturarDados("Digite o ano do veículo: ").nextLine();
+        String placa = capturarDados("Digite a placa do veículo: ").nextLine();
 
+        Veiculo veiculo = new Veiculo(tipo,marca,modelo,ano,placa);
+
+        return veiculo;
+
+    }
 
     //Execução
     public static void executar() {
