@@ -9,6 +9,7 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
+
     //Menus
     private static void menu() {
         System.out.println("\nBem vinde à nossa auto escola\n" +
@@ -41,6 +42,7 @@ public class Sistema {
                 "\n3 - Para exibir a lista de veículos cadastrados" +
                 "\n4 - Para voltar ao menu inicial.");
     }
+
 
     //Método Funcionario
     public static Funcionario cadastrarFuncionario() {
@@ -86,6 +88,7 @@ public class Sistema {
         return veiculo;
 
     }
+
 
     //Execução
     public static void executar() {
@@ -155,16 +158,18 @@ public class Sistema {
             } else if (opcao == 3) {
                 while (loopFrota) {
 
+                    menuVeiculo();
                     opcao = capturarDados("Digite a opção desejada: ").nextInt();
 
                     if (opcao == 1) {
-
+                        Veiculo veiculo = cadastrarVeiculo();
+                        autoEscola.adicionarVeiculo(veiculo);
 
                     } else if (opcao == 2) {
 
 
                     } else if (opcao == 3) {
-
+                        autoEscola.exibirListaVeiculos();
 
                     } else if (opcao == 4) {
                         loopFrota = false;

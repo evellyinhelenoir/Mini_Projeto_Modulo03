@@ -53,6 +53,7 @@ public class Veiculo {
         retorno.append("\nModelo do veiculo: " + modelo);
         retorno.append("\nAno do veiculo: " + ano);
         retorno.append("\nPlaca do veiculo: " + placa);
+        retorno.append("====================");
         return retorno.toString();
     }
 
