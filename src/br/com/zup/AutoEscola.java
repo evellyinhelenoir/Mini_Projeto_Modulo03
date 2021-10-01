@@ -69,7 +69,7 @@ public class AutoEscola {
             }
         }
 
-        veiculo.remove(alunoARemover);
+        aluno.remove(alunoARemover);
 
     }
 
@@ -97,7 +97,7 @@ public class AutoEscola {
             }
         }
 
-        veiculo.remove(funcionarioARemover);
+        funcionario.remove(funcionarioARemover);
 
     }
 
