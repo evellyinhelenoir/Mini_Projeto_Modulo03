@@ -44,20 +44,26 @@ public class AutoEscola {
         this.cnpj = cnpj;
     }
 
-    public List<Aluno> exibirListaAlunos(){
-        for (Aluno referencia: aluno){
-            System.out.println(aluno);
-        }
 
-        return aluno;
-    }
+    //Métodos referentes a lista de Alunos
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
     }
 
+    public List<Aluno> exibirListaAlunos(){
+        for (Aluno referencia: aluno){
+            System.out.println(referencia);
+        }
+
+        return aluno;
+    }
+
+
+    //Métodos referentes a lista de Funcionarios
     public void adicionarFuncionario(Funcionario novoFuncionario) {
         funcionario.add(novoFuncionario);
     }
+
 
     @Override
     public String toString() {
