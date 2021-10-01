@@ -85,6 +85,14 @@ public class AutoEscola {
         veiculo.add(novoVeiculo);
     }
 
+    public List<Veiculo> exibirListaVeiculos(){
+        for (Veiculo referencia: veiculo){
+            System.out.println(referencia);
+        }
+
+        return veiculo;
+    }
+
 
     @Override
     public String toString() {
