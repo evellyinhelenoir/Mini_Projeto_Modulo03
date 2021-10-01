@@ -69,7 +69,6 @@ public class Sistema {
         String categoria = capturarDados("Digite a categoria desejada do Aluno: ").nextLine();
 
         Aluno aluno = new Aluno(nome, cpf, idade, telefone, endereco, categoria);
-
         return aluno;
 
     }
@@ -84,7 +83,6 @@ public class Sistema {
         String placa = capturarDados("Digite a placa do veículo: ").nextLine();
 
         Veiculo veiculo = new Veiculo(tipo,marca,modelo,ano,placa);
-
         return veiculo;
 
     }
