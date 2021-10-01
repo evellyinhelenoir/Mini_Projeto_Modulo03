@@ -35,7 +35,6 @@ public class Sistema {
     }
 
 
-
     //Métodos Funcionario
     public static Funcionario cadastrarFuncionario() {
 
@@ -120,8 +119,7 @@ public class Sistema {
                         autoEscola.adicionarAlunos(aluno);
 
                     } else if (opcao == 2) {
-                        String cpf  = capturarDados("Digite o cpf que deseja excluir").nextLine();
-                        autoEscola.removeAluno(cpf);
+
 
                     } else if (opcao == 3) {
                         autoEscola.exibirListaAlunos();
