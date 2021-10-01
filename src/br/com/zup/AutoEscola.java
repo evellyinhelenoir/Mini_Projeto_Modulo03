@@ -44,20 +44,34 @@ public class AutoEscola {
         this.cnpj = cnpj;
     }
 
-    public List<Aluno> exibirListaAlunos(){
-        for (Aluno referencia: aluno){
-            System.out.println(aluno);
-        }
 
-        return aluno;
-    }
+    //Métodos referentes a lista de Alunos
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
     }
 
+    public List<Aluno> exibirListaAlunos(){
+        for (Aluno referencia: aluno){
+            System.out.println(referencia);
+        }
+
+        return aluno;
+    }
+
+    public boolean removeAluno(String cpfExcluir) {
+        for(Aluno referencia :aluno) {
+            if(referencia.getCpfPessoa().equals(cpfExcluir))
+                aluno.remove(referencia);
+            return true;
+        }
+        return false;
+    }
+
+    //Métodos referentes a lista de Funcionarios
     public void adicionarFuncionario(Funcionario novoFuncionario) {
         funcionario.add(novoFuncionario);
     }
+
 
     @Override
     public String toString() {
