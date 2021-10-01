@@ -45,7 +45,7 @@ public class AutoEscola {
     }
 
 
-    //Métodos referentes a lista de Alunos
+    //Métodos referentes a  Alunos
     public void adicionarAlunos(Aluno novoAluno){
         aluno.add(novoAluno);
     }
@@ -60,13 +60,17 @@ public class AutoEscola {
 
     public void removerAluno(String pegarCPF) {
         Aluno alunoARemover = null;
+
         for (Aluno referencia : aluno) {
             if (referencia.getCpfPessoa().equals(pegarCPF)) {
                 System.out.println("Aluno Removido.");
                 alunoARemover = referencia;
 
             }
-        }veiculo.remove(alunoARemover);
+        }
+
+        veiculo.remove(alunoARemover);
+
     }
 
     //Métodos referentes a lista de Funcionarios
@@ -81,15 +85,20 @@ public class AutoEscola {
 
         return funcionario;
     }
+
     public void removerFuncionario(String pegarCPF) {
         Funcionario funcionarioARemover = null;
+
         for (Funcionario referencia : funcionario) {
             if (referencia.getCpfPessoa().equals(pegarCPF)) {
                 System.out.println("Funcionario Removido.");
                 funcionarioARemover = referencia;
 
             }
-        }veiculo.remove(funcionarioARemover);
+        }
+
+        veiculo.remove(funcionarioARemover);
+
     }
 
     //Métodos referentes a lista de Veiculos
@@ -104,17 +113,21 @@ public class AutoEscola {
 
         return veiculo;
     }
+
     public void removerVeiculo(String pegarPlaca) {
         Veiculo veiculoARemover = null;
+
         for (Veiculo referencia : veiculo) {
             if (referencia.getPlaca().equals(pegarPlaca)) {
                 System.out.println("Carro Removido.");
                 veiculoARemover = referencia;
 
             }
-        }veiculo.remove(veiculoARemover);
-    }
+        }
 
+        veiculo.remove(veiculoARemover);
+
+    }
 
 
     @Override

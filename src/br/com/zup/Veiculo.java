@@ -1,11 +1,13 @@
 package br.com.zup;
 
 public class Veiculo {
+
     private String tipo;
     private String marca;
     private String modelo;
     private String ano;
     private String placa;
+
 
     public Veiculo() {
 
@@ -20,6 +22,13 @@ public class Veiculo {
     }
 
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     public String getMarca() {
         return marca;
     }
@@ -44,14 +53,6 @@ public class Veiculo {
         this.ano = ano;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public String getPlaca() {
         return placa;
     }
@@ -59,6 +60,7 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+
 
     @Override
     public String toString() {

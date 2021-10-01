@@ -12,6 +12,7 @@ public class Aluno extends Pessoa {
         this.categoriaDesejada = categoriaDesejada;
     }
 
+
     public String getCategoriaDesejada() {
         return categoriaDesejada;
     }
@@ -19,6 +20,7 @@ public class Aluno extends Pessoa {
     public void setCategoriaDesejada(String categoriaDesejada) {
         this.categoriaDesejada = categoriaDesejada;
     }
+
 
     @Override
     public String toString() {

@@ -12,17 +12,17 @@ public class Sistema {
 
     //Menus
     private static void menu() {
-        System.out.println("\nBem vinde à nossa auto escola\n" +
-                "Digite 1 para gerênciar os funcionários.\n" +
-                "Digite 2 para gerênciar os alunos.\n" +
-                "Digite 3 para gerênciar a frota de veículos.\n" +
-                "Digite 4 para sair!.");
+        System.out.println("\nBem vinde à nossa auto escola" +
+                "\nDigite 1 para gerênciar os funcionários." +
+                "\nDigite 2 para gerênciar os alunos." +
+                "\nDigite 3 para gerênciar a frota de veículos." +
+                "\nDigite 4 para sair!.");
     }
 
     private static void menuAluno() {
         System.out.println("\nSelecione qual função você deseja realizar: " +
                 "\n1 - Para cadastrar um novo aluno." +
-                "\n2 - Para remover um aluno." +
+                "\n2 - Para remover um aluno cadastrado." +
                 "\n3 - Para exibir a lista de alunos cadastrados" +
                 "\n4 - Para voltar ao menu inicial.");
     }
@@ -44,7 +44,7 @@ public class Sistema {
     }
 
 
-    //Método Funcionario
+    //Método Funcionarios
     public static Funcionario cadastrarFuncionario() {
 
         String nome = capturarDados("Digite o nome do funcionário: ").nextLine();
@@ -56,11 +56,13 @@ public class Sistema {
 
         Funcionario funcionario = new Funcionario(nome, cpf, idade, telefone, endereco, funcao);
         return funcionario;
+
     }
 
 
-    //Métodos Alunos
+    //Método Alunos
     public static Aluno cadastrarAluno() {
+
         String nome = capturarDados("Digite o nome do Aluno: ").nextLine();
         String cpf = capturarDados("Digite o CPF do Aluno: ").nextLine();
         int idade = capturarDados("Digite a idade do Aluno: ").nextInt();
@@ -76,6 +78,7 @@ public class Sistema {
 
     //Método Veiculos
     public static Veiculo cadastrarVeiculo(){
+
         String tipo = capturarDados("Digite qual o tipo do veiculo: ").nextLine();
         String marca = capturarDados("Digite a marca do veículo: ").nextLine();
         String modelo = capturarDados("Digite o modelo do veículo: ").nextLine();
@@ -101,9 +104,11 @@ public class Sistema {
         while (loop) {
 
             menu();
+
             int opcao = capturarDados("Digite a opção desejada:").nextInt();
 
             if (opcao == 1) {
+
                 while (loopFuncionario) {
 
                     menuFuncionario();
@@ -114,7 +119,7 @@ public class Sistema {
                         autoEscola.adicionarFuncionario(funcionario);
 
                     } else if (opcao == 2) {
-
+                        autoEscola.removerFuncionario(capturarDados("Digite o cpf do funcionário a ser removido").nextLine());
 
                     } else if (opcao == 3) {
                         autoEscola.exibirListaFuncionario();
@@ -131,6 +136,7 @@ public class Sistema {
             } else if (opcao == 2) {
 
                 while (loopAluno) {
+
                     menuAluno();
                     opcao = capturarDados("Digite a opção desejada: ").nextInt();
 
@@ -139,6 +145,7 @@ public class Sistema {
                         autoEscola.adicionarAlunos(aluno);
 
                     } else if (opcao == 2) {
+                        autoEscola.removerAluno(capturarDados("Digite o cpf do aluno  a ser removido").nextLine());
 
                     } else if (opcao == 3) {
                         autoEscola.exibirListaAlunos();
@@ -153,6 +160,7 @@ public class Sistema {
                 }
 
             } else if (opcao == 3) {
+
                 while (loopFrota) {
 
                     menuVeiculo();
@@ -163,8 +171,7 @@ public class Sistema {
                         autoEscola.adicionarVeiculo(veiculo);
 
                     } else if (opcao == 2) {
-                        autoEscola.removerVeiculo(capturarDados("Digite a placa do veículo a remover").nextLine());
-
+                        autoEscola.removerVeiculo(capturarDados("Digite a placa do veículo  a ser removido").nextLine());
 
                     } else if (opcao == 3) {
                         autoEscola.exibirListaVeiculos();
@@ -185,6 +192,9 @@ public class Sistema {
             else {
                 System.out.println("Opção selecionada inválida, digite novamente!");
             }
+
         }
+
     }
+
 }
