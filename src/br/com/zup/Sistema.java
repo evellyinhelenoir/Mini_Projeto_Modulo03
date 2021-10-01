@@ -140,7 +140,6 @@ public class Sistema {
 
                     } else if (opcao == 2) {
 
-
                     } else if (opcao == 3) {
                         autoEscola.exibirListaAlunos();
 
@@ -164,6 +163,7 @@ public class Sistema {
                         autoEscola.adicionarVeiculo(veiculo);
 
                     } else if (opcao == 2) {
+                        autoEscola.removerVeiculo(capturarDados("Digite a placa do veículo a remover").nextLine());
 
 
                     } else if (opcao == 3) {

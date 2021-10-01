@@ -58,13 +58,15 @@ public class AutoEscola {
         return aluno;
     }
 
-    public boolean removeAluno(String cpfExcluir) {
-        for(Aluno referencia :aluno) {
-            if(referencia.getCpfPessoa().equals(cpfExcluir))
-                aluno.remove(referencia);
-            return true;
-        }
-        return false;
+    public void removerAluno(String pegarCPF) {
+        Aluno alunoARemover = null;
+        for (Aluno referencia : aluno) {
+            if (referencia.getCpfPessoa().equals(pegarCPF)) {
+                System.out.println("Aluno Removido.");
+                alunoARemover = referencia;
+
+            }
+        }veiculo.remove(alunoARemover);
     }
 
     //Métodos referentes a lista de Funcionarios
@@ -79,6 +81,16 @@ public class AutoEscola {
 
         return funcionario;
     }
+    public void removerFuncionario(String pegarCPF) {
+        Funcionario funcionarioARemover = null;
+        for (Funcionario referencia : funcionario) {
+            if (referencia.getCpfPessoa().equals(pegarCPF)) {
+                System.out.println("Funcionario Removido.");
+                funcionarioARemover = referencia;
+
+            }
+        }veiculo.remove(funcionarioARemover);
+    }
 
     //Métodos referentes a lista de Veiculos
     public void adicionarVeiculo(Veiculo novoVeiculo){
@@ -92,6 +104,17 @@ public class AutoEscola {
 
         return veiculo;
     }
+    public void removerVeiculo(String pegarPlaca) {
+        Veiculo veiculoARemover = null;
+        for (Veiculo referencia : veiculo) {
+            if (referencia.getPlaca().equals(pegarPlaca)) {
+                System.out.println("Carro Removido.");
+                veiculoARemover = referencia;
+
+            }
+        }veiculo.remove(veiculoARemover);
+    }
+
 
 
     @Override
