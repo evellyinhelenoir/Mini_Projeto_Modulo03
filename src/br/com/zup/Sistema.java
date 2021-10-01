@@ -9,6 +9,7 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
+
     //Menus
     private static void menu() {
         System.out.println("\nBem vinde à nossa auto escola\n" +
@@ -34,8 +35,16 @@ public class Sistema {
                 "\n4 - Para voltar ao menu inicial.");
     }
 
+    private static void menuVeiculo() {
+        System.out.println("\nSelecione qual função você deseja realizar: " +
+                "\n1 - Para cadastrar um novo veiculo." +
+                "\n2 - Para remover um veículo." +
+                "\n3 - Para exibir a lista de veículos cadastrados" +
+                "\n4 - Para voltar ao menu inicial.");
+    }
 
-    //Métodos Funcionario
+
+    //Método Funcionario
     public static Funcionario cadastrarFuncionario() {
 
         String nome = capturarDados("Digite o nome do funcionário: ").nextLine();
@@ -66,7 +75,19 @@ public class Sistema {
     }
 
 
-    //Métodos Veiculos
+    //Método Veiculos
+    public static Veiculo cadastrarVeiculo(){
+        String tipo = capturarDados("Digite qual o tipo do veiculo: ").nextLine();
+        String marca = capturarDados("Digite a marca do veículo: ").nextLine();
+        String modelo = capturarDados("Digite o modelo do veículo: ").nextLine();
+        String ano = capturarDados("Digite o ano do veículo: ").nextLine();
+        String placa = capturarDados("Digite a placa do veículo: ").nextLine();
+
+        Veiculo veiculo = new Veiculo(tipo,marca,modelo,ano,placa);
+
+        return veiculo;
+
+    }
 
 
     //Execução
@@ -137,16 +158,18 @@ public class Sistema {
             } else if (opcao == 3) {
                 while (loopFrota) {
 
+                    menuVeiculo();
                     opcao = capturarDados("Digite a opção desejada: ").nextInt();
 
                     if (opcao == 1) {
-
+                        Veiculo veiculo = cadastrarVeiculo();
+                        autoEscola.adicionarVeiculo(veiculo);
 
                     } else if (opcao == 2) {
 
 
                     } else if (opcao == 3) {
-
+                        autoEscola.exibirListaVeiculos();
 
                     } else if (opcao == 4) {
                         loopFrota = false;

@@ -80,6 +80,19 @@ public class AutoEscola {
         return funcionario;
     }
 
+    //Métodos referentes a lista de Veiculos
+    public void adicionarVeiculo(Veiculo novoVeiculo){
+        veiculo.add(novoVeiculo);
+    }
+
+    public List<Veiculo> exibirListaVeiculos(){
+        for (Veiculo referencia: veiculo){
+            System.out.println(referencia);
+        }
+
+        return veiculo;
+    }
+
 
     @Override
     public String toString() {
