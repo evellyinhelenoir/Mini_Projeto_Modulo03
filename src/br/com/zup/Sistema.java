@@ -26,6 +26,15 @@ public class Sistema {
                 "\n4 - Para voltar ao menu inicial.");
     }
 
+    private static void menuFuncionario() {
+        System.out.println("\nSelecione qual função você deseja realizar: " +
+                "\n1 - Para cadastrar um novo funcionário." +
+                "\n2 - Para remover um funcionário." +
+                "\n3 - Para exibir a lista de funcionários cadastrados." +
+                "\n4 - Para voltar ao menu inicial.");
+    }
+
+
 
     //Métodos Funcionario
     public static Funcionario cadastrarFuncionario() {
