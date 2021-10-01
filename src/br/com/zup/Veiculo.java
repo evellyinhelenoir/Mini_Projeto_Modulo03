@@ -1,18 +1,22 @@
 package br.com.zup;
 
 public class Veiculo {
+    private String tipo;
     private String marca;
     private String modelo;
     private String ano;
+    private String placa;
 
     public Veiculo() {
 
     }
 
-    public Veiculo ( String marca, String modelo, String ano) {
+    public Veiculo (String tipo, String marca, String modelo, String ano, String placa) {
+        this.tipo = tipo;
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
+        this.placa = placa;
     }
 
 
@@ -48,6 +52,7 @@ public class Veiculo {
         retorno.append("\nMarca do veiculo: " + marca);
         retorno.append("\nModelo do veiculo: " + modelo);
         retorno.append("\nAno do veiculo: " + ano);
+        retorno.append("\nPlaca do veiculo: " + placa);
         return retorno.toString();
     }
 
