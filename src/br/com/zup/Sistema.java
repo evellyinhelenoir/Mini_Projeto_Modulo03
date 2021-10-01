@@ -52,7 +52,7 @@ public class Sistema {
         int idade = capturarDados("Digite a idade do funcionário: ").nextInt();
         String telefone = capturarDados("Digite o telefone do funcionário: ").nextLine();
         String endereco = capturarDados("Digite o endereço do funcionário: ").nextLine();
-        String funcao = capturarDados("Digite a funcção do funcionário: ").nextLine();
+        String funcao = capturarDados("Digite a função do funcionário: ").nextLine();
 
         Funcionario funcionario = new Funcionario(nome, cpf, idade, telefone, endereco, funcao);
         return funcionario;
